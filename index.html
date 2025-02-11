@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Centraliza o conteúdo horizontalmente */
+            align-items: center; /* Centraliza o conteúdo verticalmente */
+            height: 100vh; /* Ocupa toda a altura da tela */
+            background-color: white; /* Fundo branco */
+        }
+
+        .container {
+            width: 80%; /* Largura do conteúdo */
+            max-width: 800px; /* Largura máxima */
+            background-color: #f9f9f9; /* Fundo claro para o editor */
+            padding: 20px;
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor */
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Espaço entre os editores */
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 38px;
+            text-align: center;
+        }
+
+        #title {
+            background-color: transparent;
+            color: white;
+            font-size: 30px;
+            border: 2px solid #ccc; /* Adicionando borda ao campo de título */
+            text-align: center;
+            width: 100%;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .editor-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid #ccc;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .editor {
+            width: 90%;
+            height: 60px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            resize: none;
+        }
+
+        .image-container {
+            width: 10%;
+            text-align: center;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .image-container img {
+            width: 50px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .last-editor-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 50px;
+            border: 2px solid #ccc;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <input type="text" id="title"  placeholder="Nome da Demanda">
+        </header>
+
+        <main>
+            <div class="editor-container">
+                <textarea class="editor" id="editor1" placeholder="Digite o primeiro texto aqui..."></textarea>
+                <div class="image-container">
+                    <img src="https://tm.ibxk.com.br/2019/02/17/17124052466014.jpg" alt="Imagem Exemplo">
+                </div>
+            </div>
+            <div class="editor-container">
+                <textarea class="editor" id="editor2" placeholder="Digite o segundo texto aqui..."></textarea>
+                <div class="image-container">
+                    <img src="https://files.tecnoblog.net/wp-content/uploads/2019/02/thispersondoesnotexist.jpg" alt="Imagem Exemplo">
+                </div>
+            </div>
+            <div class="last-editor-container">
+                <div class="image-container">
+                    <img src="https://tm.ibxk.com.br/2019/02/17/17124052466014.jpg" alt="Imagem Exemplo">
+                </div>
+                <textarea class="editor" id="editor3" placeholder="Digite o terceiro texto aqui..."></textarea>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
